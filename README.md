@@ -3,6 +3,9 @@
 ## CN 简介
 课程/训练型 Node.js 全栈项目，展示 Express + SQLite + Vue + ECharts 的快速落地。
 
+## 运行效果
+<img width="1600" height="1200" alt="dashboard" src="https://github.com/user-attachments/assets/eaf5f091-0195-4c2c-99e9-1c7afbe7c15a" />
+
 ## EN Summary
 A course-level Node.js full-stack prototype using Express, SQLite, Vue, and ECharts.
 
