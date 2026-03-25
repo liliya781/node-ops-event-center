@@ -1,2 +1,55 @@
-# node-ops-event-center
-是一个“小型运维工单 + 可视化看板”系统 主要用来做这些事：    1. 记录运维事件      例如：算法平台服务异常、容器启动失败、数据库连接超时、服务器告警等。   2. 管理事件生命周期      支持新增、筛选、更新状态、删除（未处理/处理中/已解决）。   3. 做汇总分析看板      自动生成 3 类图表：级别分布、服务分布、每日趋势，便于写周报或复盘。   4. 作为 API 中转层      当前代码里是本地 SQLite + REST API。
+# Node Ops Event Center / Node.js 运维事件中心
+
+## CN 简介
+课程/训练型 Node.js 全栈项目，展示 Express + SQLite + Vue + ECharts 的快速落地。
+
+## EN Summary
+A course-level Node.js full-stack prototype using Express, SQLite, Vue, and ECharts.
+
+## CN 功能与数据
+- 核心功能：事件新增、筛选、状态更新、删除
+- 统计图表：3 张（级别分布、服务分布、每日趋势）
+- 后端接口：7 个
+- 默认样例数据：4 条（启动时自动初始化）
+- 数据存储：本地 SQLite 文件 `ops-events.db`
+
+## EN Features & Metrics
+- Core features: create/filter/update-status/delete events
+- Charts: 3 (level, service, daily trend)
+- Backend APIs: 7
+- Seed data: 4 rows auto-initialized at startup
+- Storage: local SQLite file `ops-events.db`
+
+## Tech Stack
+- Backend: Node.js, Express, better-sqlite3
+- Frontend: Vue 3, Axios, ECharts, Vite
+
+## Quick Start
+### Backend
+```bash
+cd backend
+npm install
+npm run dev
+```
+URL: `http://localhost:8090`
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+URL: `http://localhost:5176`
+
+## API List
+- `GET /api/events`
+- `POST /api/events`
+- `PATCH /api/events/:id/status`
+- `DELETE /api/events/:id`
+- `GET /api/stats/level`
+- `GET /api/stats/service`
+- `GET /api/stats/day`
+
+## Low-Risk Statement / 降风险说明
+- 项目定位为课程训练作品，重点在流程打通和可视化展示。
+- 未做生产环境性能优化与高可用设计。
